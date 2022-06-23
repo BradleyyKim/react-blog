@@ -1,19 +1,21 @@
+import { Link } from "react-router-dom";
 import Author from "../Author";
 import Category from "../Category";
 import "./style.css";
 
-const PostItem = ({ posts }) => {
+const PostItem = ({ post }) => {
+  console.log(post);
   return (
     <li>
-      <a href="post-view.html" className="post">
+      <Link to="post-view" className="post">
         <article>
-          <img src="./" alt="" />
+          <img src={post.thumbnail} alt="" />
           <div className="contents-wrap">
-            <Category category={posts.category} />
+            <Category category={post.category} />
 
             <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit</h3>
 
-            <Author userName={posts.userName} profileImg={posts.profileImg} created={posts.created} />
+            <Author userName={post.userName} profileImg={post.profileImg} created={post.created} />
 
             <p className="post-description">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore illum nostrum perferendis voluptas,
@@ -28,7 +30,7 @@ const PostItem = ({ posts }) => {
             </p>
           </div>
         </article>
-      </a>
+      </Link>
     </li>
   );
 };

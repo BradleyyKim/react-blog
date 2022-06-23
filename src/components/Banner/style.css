@@ -1,8 +1,10 @@
 .banner {
   position: relative;
-  background: url(../assets/background.jpg) no-repeat 50% 50% / cover;
+  background: url(../../images/background.jpg) no-repeat 50% 50% / cover;
+  /* public에 이미지를 넣으면  상대경로의 경우 css가 못찾음 그래서 src에서 따로 관리 */
   height: 27em;
   margin-bottom: -7em;
+  z-index: -1;
 }
 
 .banner-contents {

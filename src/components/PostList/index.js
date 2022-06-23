@@ -3,9 +3,9 @@ import PostItem from "../PostItem";
 import "./style.css";
 const PostList = () => {
   return (
-    <ul>
-      {data.posts.map((posts) => (
-        <PostItem posts={posts} key={posts.id} />
+    <ul className="posts">
+      {data.posts.map((post) => (
+        <PostItem post={post} key={post.id} />
       ))}
     </ul>
   );
