@@ -1,5 +1,5 @@
 import Banner from "../../components/Banner";
-import PostList from "../../components/posts/PostList";
+import PostList from "../../components/PostList";
 
 const Home = () => {
   return (

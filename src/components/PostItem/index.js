@@ -1,19 +1,19 @@
-import Author from "../../Author";
-import Category from "../../Category";
+import Author from "../Author";
+import Category from "../Category";
 import "./style.css";
 
-const PostItem = ({ post }) => {
+const PostItem = ({ posts }) => {
   return (
     <li>
       <a href="post-view.html" className="post">
         <article>
-          <img src="./images/post-img6.jpg" alt="" />
+          <img src="./" alt="" />
           <div className="contents-wrap">
-            <Category category={post.category} />
+            <Category category={posts.category} />
 
             <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit</h3>
 
-            <Author userName={post.userName} profileImg={post.profileImg} created={post.created} />
+            <Author userName={posts.userName} profileImg={posts.profileImg} created={posts.created} />
 
             <p className="post-description">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore illum nostrum perferendis voluptas,

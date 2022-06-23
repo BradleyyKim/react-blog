@@ -1,3 +1,4 @@
+import "./style.css";
 const Author = ({ userName, profileImg, created }) => {
   return (
     <dl className="author-wrap">

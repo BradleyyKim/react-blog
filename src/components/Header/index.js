@@ -17,10 +17,10 @@ function Header() {
             </Link>
           </li>
           <li>
-            <a href="#" className="button">
+            <Link to="/" className="button">
               <img src="./assets/icon-modify-white.svg" alt="" />
               <span>Write</span>
-            </a>
+            </Link>
           </li>
           <li>
             <button className="button white">
@@ -32,16 +32,16 @@ function Header() {
 
           {/* 로그아웃 */}
           <li>
-            <a href="#" className="button gray">
+            <Link to="/" className="button gray">
               <img src="./assets/icon-login.svg" alt="" />
               <span>Login</span>
-            </a>
+            </Link>
           </li>
           <li className="only-pc">
-            <a href="#" className="button gray">
+            <Link to="/" className="button gray">
               <img src="./assets/icon-register.svg" alt="" />
               <span>Register</span>
-            </a>
+            </Link>
           </li>
           {/* 로그아웃 */}
         </ul>
