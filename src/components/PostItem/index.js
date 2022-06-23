@@ -7,13 +7,13 @@ const PostItem = ({ post }) => {
   console.log(post);
   return (
     <li>
-      <Link to="post-view" className="post">
+      <Link to={`post-view/${post.id}`} className="post">
         <article>
           <img src={post.thumbnail} alt="" />
           <div className="contents-wrap">
             <Category category={post.category} />
 
-            <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit</h3>
+            <h3>{post.title}</h3>
 
             <Author userName={post.userName} profileImg={post.profileImg} created={post.created} />
 

@@ -1,14 +1,16 @@
 import data from "../../db/data.json";
-import { Link } from "react-router-dom";
+import { Link, useParams, useRoutes } from "react-router-dom";
 import Author from "../../components/Author";
 import Category from "../../components/Category";
 import "./style.css";
 const PostView = () => {
   console.log("ㅁ", data);
+  const params = useParams();
+  console.log(params);
 
   return (
     <div>
-      <div className="banner" style={{ backgroundImage: "url(/assets/post-background6.jpg)" }}>
+      <div className="banner" style={{ backgroundImage: `url(${data.posts[params.id - 1].mainBg})` }}>
         <div className="max-width">
           <div className="banner-contents">
             <p className="today">
@@ -22,13 +24,13 @@ const PostView = () => {
           <section className="wrap-box">
             <div className="inner">
               <Author
-                userName={data.posts[0].userName}
-                profileImg={data.posts[0].profileImg}
-                created={data.posts[0].created}
+                userName={data.posts[params.id - 1].userName}
+                profileImg={data.posts[params.id - 1].profileImg}
+                created={data.posts[params.id - 1].created}
               />
-              <Category category={data.posts[0].category} />
+              <Category category={data.posts[params.id - 1].category} />
               <div className="title-wrap">
-                <h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h2>
+                <h2>{data.posts[params.id - 1].title}</h2>
                 <button className="btn-like">Like</button>
               </div>
               <hr />
